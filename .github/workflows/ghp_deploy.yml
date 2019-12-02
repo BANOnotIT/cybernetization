@@ -16,6 +16,7 @@ jobs:
       - name: Cache
         uses: actions/cache@v1.0.3
         with:
+          key: cache
           path: node_modules
       - name: npm install, build, and test
         run: |
