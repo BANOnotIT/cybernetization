@@ -24,6 +24,12 @@ jobs:
           yarn build
         env:
           CI: true
-
-      - name: GitHub Pages Deploy
-        uses: maxheld83/ghpages@v0.2.1
+      - name: GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v1.2.5
+        with:
+          # Build directory to deploy
+          build_dir: public
+          # Commit author's name
+          committer_name: BANO.notIT
+          # Commit author's email
+          committer_email: bano.notit@yandex.ru
