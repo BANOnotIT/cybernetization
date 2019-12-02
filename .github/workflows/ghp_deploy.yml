@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -18,7 +17,7 @@ jobs:
         with:
           key: cache
           path: node_modules
-      - name: npm install, build, and test
+      - name: Yarn install and build
         run: |
           yarn
           yarn build
@@ -33,3 +32,5 @@ jobs:
           committer_name: BANO.notIT
           # Commit author's email
           committer_email: bano.notit@yandex.ru
+        env:
+          GITHUB_PAT: ${{ secrets.GH_PAT }}
