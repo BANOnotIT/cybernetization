@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-    livereload = require('gulp-livereload'),
     sass = require('gulp-sass'),
     cleanCss = require('gulp-clean-css'),
     pug = require('gulp-pug'),
@@ -18,15 +17,16 @@ function style() {
         .pipe(concat('main.css'))
         .pipe(cleanCss())
         .pipe(gulp.dest('public/'))
-        .pipe(livereload())
+        .pipe(browserSync.stream())
 }
 
 
 function html() {
     return gulp.src('src/**/*.pug', {ignore: '**/viewports/**/*.*'})
-        .pipe(pug())
+        .pipe(pug({
+            cache: false
+        }))
         .pipe(gulp.dest('public/'))
-        .pipe(livereload())
 }
 
 function watch() {
