@@ -1,0 +1,23 @@
+@import "../colors";
+
+$text: $text2;
+
+#quotes {
+  color: $text;
+  background: $primary-weak;
+  //padding: 20vw;
+  //width: 300px;
+
+  blockquote {
+    font-style: italic;
+    font-family: 'Fira Mono', monospace;
+    position: relative;
+
+    &::before {
+      content: '<< ';
+      position: absolute;
+      left: -3ex;
+    }
+
+  }
+}

@@ -1,6 +1,8 @@
 @import "../colors";
 
-.page.-summary {
+$text: $text2;
+
+#summary {
   background: $secondary;
   color: $text;
 
@@ -9,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  //height: 100%;
 
   font-family: 'Montserrat', sans-serif;
 

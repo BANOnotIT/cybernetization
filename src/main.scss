@@ -1,4 +1,5 @@
 //@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Montserrat:400,900&display=swap');
+@import "colors";
 
 html, body {
   margin: 0;
@@ -7,8 +8,50 @@ html, body {
 }
 
 
-.page {
+section {
+  font-size: 1.6rem;
   min-height: 100vh;
   position: relative;
-  overflow-y: hidden;
+  //overflow-y: hidden;
+
+  &.-middle {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.-pad {
+    padding: 150px 300px;
+    box-sizing: border-box;
+  }
+
+  &.-vertical {
+    flex-direction: column;
+  }
+}
+
+footer {
+  background: wheat;
+
+  font-family: 'Fira Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  font-size: 1.4em;
+
+  a {
+    color: $secondary;
+  }
+}
+
+.u-flex {
+  display: flex;
+
+  &.-col {
+    flex-direction: column;
+  }
 }

@@ -1,7 +1,10 @@
 @import "../colors";
 
-.page.-main {
+$text: $text1;
 
+#title {
+
+  overflow: hidden;
   font-family: 'Montserrat', sans-serif;
   color: $text;
 
@@ -28,6 +31,7 @@
     text-align: center;
     font-size: 6vh;
     animation: page-main__cover 3s ease-out forwards;
+    line-height: .9;
 
     b {
 
@@ -35,7 +39,8 @@
       display: block;
       width: 100%;
       text-transform: uppercase;
-      font-weight: 900
+      font-weight: 900;
+      animation: 2s linear 1.5s 3 glitch-skew;
     }
   }
 }
@@ -51,11 +56,38 @@
   }
 }
 
-@keyframes page-main__cover {
-  from {
-    opacity: 0;
+//
+//@keyframes page-main__cover {
+//  from {
+//    opacity: 0;
+//  }
+//  to {
+//    opacity: 1;
+//  }
+//}
+
+
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg, 0deg);
   }
-  to {
-    opacity: 1;
+  48% {
+    transform: skew(0deg, 0deg);
+    filter: blur(0);
   }
+  50% {
+    transform: skew(-20deg, 0deg);
+    filter: blur(4px);
+  }
+  52% {
+    transform: skew(20deg, 0deg);
+  }
+  54% {
+    transform: skew(0deg, 0deg);
+    filter: blur(0);
+  }
+  100% {
+    transform: skew(0deg, 0deg);
+  }
+
 }

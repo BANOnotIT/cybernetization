@@ -1,10 +1,14 @@
 html
-    head
-        link(href='./main.css' rel='stylesheet')
-        link(rel='stylesheet' href="https://fonts.googleapis.com/css?family=Fira+Mono|Montserrat:400,900&display=swap")
-    body
-        main
-            include viewports/title
-            include viewports/summary
-        footer
-            | &copy; BANOnotIT
+  head
+    link(href='./main.css' rel='stylesheet')
+    link(rel='stylesheet' href="https://fonts.googleapis.com/css?family=Fira+Mono|Montserrat:400,900&display=swap")
+  body
+    main
+      include viewports/title
+      include viewports/summary
+      include viewports/some-quotes
+      //include viewports/glitchy
+    footer
+      a(href='https://github.com/BANOnotIT/cybernetization') Sources 2019 &copy; BANO.notIT
+
+    script(src='./assets/quotes-animation.js')
