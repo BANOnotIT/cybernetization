@@ -31,6 +31,63 @@ section {
   }
 }
 
+.page-section.-quotes {
+  display: flex;
+  align-items: stretch;
+
+  > .img {
+    min-height: 100vh;
+    position: relative;
+    flex-grow: 2;
+    overflow: hidden;
+
+    > img {
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  > .text {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40vw;
+
+    box-sizing: border-box;
+    padding: 40px;
+
+    > .thesis {
+      font-family: 'Montserrat', sans-serif;
+      width: 100%;
+      font-weight: bold;
+      font-size: 3rem;
+      line-break: loose;
+    }
+
+    > .quotes {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+
+      > blockquote {
+        font-family: 'Fira Mono', monospace;
+        position: relative;
+        line-height: 1.3;
+
+        &::before {
+          content: '<< ';
+          position: absolute;
+          left: -3ex;
+        }
+      }
+    }
+  }
+
+}
+
+
 footer {
   background: wheat;
 

@@ -1,23 +1,12 @@
 @import "../colors";
 
-$text: $text2;
+$text: $text3;
 
 #quotes {
   color: $text;
-  background: $primary-weak;
-  //padding: 20vw;
-  //width: 300px;
 
-  blockquote {
-    font-style: italic;
-    font-family: 'Fira Mono', monospace;
-    position: relative;
+  .text {
 
-    &::before {
-      content: '<< ';
-      position: absolute;
-      left: -3ex;
-    }
-
+    background: transparentize($primary-weak, 0);
   }
 }
