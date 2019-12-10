@@ -1,21 +1,20 @@
-const CODE = "&#*+%?£@§\\/.6^⅋¶4;";
-
 function animateBlock(elem) {
     const originalText = elem.innerText;
 
-    let shuffledIndices = (new Array(originalText.length)).fill(1).map((_, i) => i).sort(() => Math.random() - .5);
-    let randomText = shuffledIndices.map(() => CODE[Math.floor(Math.random() * CODE.length)]).join('');
-
-
+    // const CODE = "&#TфЕ3фПнфПШыпЫ.6^⅋¶4;";
+    // CODE.charAt(Math.floor(Math.random() * CODE.length))
+    let randomText = originalText.replace(/\S/g, () => String.fromCharCode(0x20 + Math.floor(Math.random() * (0x24f - 0x20))));
     elem.innerText = randomText;
+
+    let shuffledIndices = (new Array(originalText.length))
+        .fill(1)
+        .map((_, i) => i)
+        .sort(() => Math.random() - .5);
 
     function an() {
         const i = shuffledIndices.pop();
         randomText = randomText.slice(0, i) + originalText[i] + randomText.slice(i + 1);
-        console.log(randomText);
         elem.innerText = randomText;
-
-        console.log(i);
 
         if (shuffledIndices.length)
             requestAnimationFrame(an)
