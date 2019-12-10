@@ -39,9 +39,9 @@ function watch() {
 function img() {
     return gulp.src('src/assets/**/*.*')
         // .pipe(imageResize({width: 1080}))
-        .pipe(imagemin({
-            verbose: true
-        }))
+        .pipe(imagemin([
+            imagemin.jpegtran({progressive: true})
+        ]))
         .pipe(gulp.dest('public/assets'))
 }
 
