@@ -1,0 +1,9 @@
+mixin part(pos)
+  div(style={'grid-area': pos})&attributes(attributes)
+    block
+
+.golden-grid.-dev
+  +part('11 / 1 / span 10 / span 12')(style={'background': 'red'})
+    | some content
+  +part('5 / 6 / span 10 / span 10')(style={'background': 'black'})
+    img(src='./assets/warbot.jpg', width='100%', height='100%')

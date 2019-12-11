@@ -117,3 +117,25 @@ footer {
     flex-direction: column;
   }
 }
+
+
+$gg-parts: 1fr 1fr 2fr 4fr 2.66fr 5.33fr 5.33fr 4.33fr 2.83fr 3.5fr 3.5fr 2.83fr 4.33fr 5.33fr 5.33fr 2.66fr 4fr 2fr 1fr 1fr;
+
+.golden-grid {
+  position: relative;
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-rows: $gg-parts;
+  grid-template-columns: $gg-parts;
+
+  & > .img-fit {
+    background-size: cover;
+  }
+
+  &.-dev {
+    background-image: url('https://habrastorage.org/webt/1k/ir/gl/1kirglnrstiva5u2b1yqiagwrqu.jpeg');
+    background-position: left top;
+    background-size: 100% 100%;
+  }
+}
