@@ -5,6 +5,11 @@ mixin quotes-section(img)
     .text
       block
 
+mixin gridSpan(col,row,h,w)
+  div(style={'grid-area': `${col} / ${row} / span ${w} / span ${h}`})&attributes(attributes)
+    block
+
+
 html
   head
     link(href='./main.css' rel='stylesheet')
