@@ -1,0 +1,22 @@
+#usage {
+  > .img {
+    background-image: url(assets/prosthetic.jpg);
+    background-position: bottom center;
+    grid-area: 3 / 3 / span 16 / span 8;
+  }
+
+  > h1 {
+    font-size: 4rem;
+    grid-area: 4 / 12 / span 2 / span 6;
+    text-align: right;
+    margin: 0;
+  }
+
+  > .quotes {
+    grid-area: 7 / 9 / span 7 / span 6;
+  }
+
+  > .fill {
+    grid-area: 8 / 7 / span 10/ span 11;
+  }
+}
