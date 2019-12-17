@@ -30,6 +30,22 @@ html
     script(src='./assets/quotes-animation.js')
     script(src='./assets/anim-scroll.js')
 
+    script.
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })(window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(56713492, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    noscript
+      div
+        img(src='https://mc.yandex.ru/watch/56713492' style={position: 'absolute', left: '-100vw'})
     //script(src='https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js')
     //script.
         new fullpage('#js-fullpage', {
