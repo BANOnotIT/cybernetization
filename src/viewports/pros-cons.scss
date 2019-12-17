@@ -4,20 +4,28 @@
 
   .fill {
     grid-area: 1/1/12/21;
-    border-bottom-left-radius: 4rem;
+    border-bottom-left-radius: 6rem;
   }
 
   .img {
     background-image: url(./assets/titan-arm.jpg);
-    grid-area: 1/12/21/21;
+    grid-area: 3/12/21/19;
   }
 
   .quotes {
     font-family: Montserrat, sans-serif;
 
-    h2 {
-      margin-left: 2ex;
+    > h2 {
+      margin-left: 2.5rem;
       font-size: 4rem;
+    }
+
+
+    > blockquote {
+      font-weight: bold;
+      padding: 0 0 0 2rem;
+      border-left: solid .5rem;
+      font-family: "Fira Mono", monospace;
     }
   }
 
@@ -28,9 +36,6 @@
 
     > blockquote {
       background-color: transparent;
-      font-weight: bold;
-      padding: 0 0 0 2ex;
-      border-left: solid 1ex;
     }
 
   }
@@ -38,9 +43,5 @@
   #cons {
     grid-area: 12/4/21/11;
 
-    > blockquote {
-      padding: 0 0 0 2ex;
-      border-left: solid 1ex;
-    }
   }
 }
