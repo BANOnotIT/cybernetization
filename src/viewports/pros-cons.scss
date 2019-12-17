@@ -1,0 +1,46 @@
+@import "../colors";
+
+#pros-cons {
+
+  .fill {
+    grid-area: 1/1/12/21;
+    border-bottom-left-radius: 4rem;
+  }
+
+  .img {
+    background-image: url(./assets/titan-arm.jpg);
+    grid-area: 1/12/21/21;
+  }
+
+  .quotes {
+    font-family: Montserrat, sans-serif;
+
+    h2 {
+      margin-left: 2ex;
+      font-size: 4rem;
+    }
+  }
+
+  #pros {
+    grid-area: 1/4/12/11;
+    color: $rich-black;
+    align-self: end;
+
+    > blockquote {
+      background-color: transparent;
+      font-weight: bold;
+      padding: 0 0 0 2ex;
+      border-left: solid 1ex;
+    }
+
+  }
+
+  #cons {
+    grid-area: 12/4/21/11;
+
+    > blockquote {
+      padding: 0 0 0 2ex;
+      border-left: solid 1ex;
+    }
+  }
+}
