@@ -15,12 +15,22 @@ html
     link(href='./main.css' rel='stylesheet')
     link(rel='stylesheet' href="https://fonts.googleapis.com/css?family=Fira+Mono|Montserrat:400,900&display=swap")
   body
-    main
+    main#js-fullpage
+      include viewports/sport
+      include viewports/limits
+      //include viewports/summary
+      include viewports/usage
       include viewports/title
-      include viewports/summary
-      include viewports/some-quotes
-      include viewports/golden-grid-example
+      //include viewports/some-quotes
+      //include viewports/golden-grid-example
     footer
       a(href='https://github.com/BANOnotIT/cybernetization') Sources 2019 &copy; BANO.notIT
 
     script(src='./assets/quotes-animation.js')
+    script(src='./assets/anim-scroll.js')
+
+    //script(src='https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.js')
+    //script.
+        new fullpage('#js-fullpage', {
+            sectionSelector: 'section'
+        })
