@@ -1,6 +1,6 @@
 const initScrollAnimation = () => {
     const delay = 400;
-    const duration = 400;
+    const duration = 300;
 
     let sections = Array.prototype.slice.call(document.querySelectorAll('#js-fullpage > section'));
 
