@@ -1,0 +1,34 @@
+@import "../colors";
+
+#fashion {
+  .fill {
+    grid-area: 7/3/21/17;
+    border-top-left-radius: 4rem;
+  }
+
+  .img {
+    background-image: url(./assets/fashion-guy.jpg);
+    grid-area: 1/13/21/21;
+    background-position: top center;
+  }
+
+  .quotes {
+    grid-area: 8/5/10/10;
+
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    color: $rich-black;
+
+    > blockquote {
+      background-color: transparent;
+      font-weight: bold;
+      padding: 0 2ex 0 0;
+      border-right: solid 1ex;
+    }
+  }
+
+  h1 {
+    grid-area: 4/13/17/20;
+    font-size: 7rem;
+  }
+}
