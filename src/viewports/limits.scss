@@ -1,8 +1,6 @@
 @import "../colors";
 
 #limits {
-  color: $text4;
-
   .fill {
     grid-area: 1 / 3 / 15/ 21;
     border-bottom-left-radius: 4rem;
@@ -23,8 +21,8 @@
     > blockquote {
       background-color: transparent;
       font-weight: bold;
-      padding: 0 0 0 2ex;
-      border-left: solid 1ex;
+      padding: 0 0 0 2rem;
+      border-left: solid .5rem;
     }
   }
 

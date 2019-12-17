@@ -32,7 +32,7 @@ section {
 }
 
 .page-section {
-  color: $text1;
+  color: $text3;
 
 
   > .img {
@@ -141,4 +141,34 @@ $gg-parts: 1fr 1fr 2fr 4fr 2.66fr 5.33fr 5.33fr 4.33fr 2.83fr 3.5fr 3.5fr 2.83fr
 
     color: black !important;
   }
+}
+
+/// VIEWPORTS
+
+#limits {
+  color: purple;
+}
+
+#russia {
+  color: royalblue;
+}
+
+#abroad {
+  color: #D12F12
+}
+
+#fashion {
+  color: #F4C133;
+}
+
+#usage {
+  color: #36cd3b;
+}
+
+#pros-cons {
+  color: #D12F12;
+}
+
+#sport {
+  color: #2afff0;
 }
