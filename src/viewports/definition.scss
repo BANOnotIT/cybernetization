@@ -1,0 +1,29 @@
+#definition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  dl {
+    max-width: 1000px;
+  }
+
+  dt {
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  dd {
+    font-family: "Fira Mono", monospace;
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-align: justify;
+
+    &::before {
+      position: absolute;
+      margin-left: -2ex;
+      content: '… ';
+    }
+  }
+}
