@@ -35,9 +35,10 @@ function html() {
 }
 
 function watch() {
-    gulp.watch('src/**/*.scss', (style));
-    gulp.watch('src/**/*.pug', (html));
+    gulp.watch('src/**/*.scss', style);
+    gulp.watch('src/**/*.pug', html);
     gulp.watch('src/assets/**/*', img);
+    gulp.watch('src/js/**/*', js);
     sync()
 }
 
@@ -53,8 +54,17 @@ function img() {
 function js() {
     return gulp.src('src/js/**/*.*')
         .pipe(sourcemaps.init())
-        .pipe(terser())
-        .pipe(sourcemaps.write('maps/'))
+        .pipe(terser({
+            mangle: {
+                toplevel: true,
+                // debugger: false
+            },
+            compress: {
+                passes: 2,
+                toplevel: true,
+            }
+        }))
+        .pipe(sourcemaps.write('../../maps/'))
         .pipe(gulp.dest('public/assets/js'))
 }
 
