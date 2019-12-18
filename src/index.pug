@@ -10,10 +10,15 @@ mixin gridSpan(col,row,h,w)
     block
 
 
-html
+doctype html
+html(lang='ru')
   head
     meta(name='charset' content='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='description' content='"Что такое кибернетизация для россиян?" - результаты социологического исследования группы ИУ6-12Б МГТУ им. Н.Э.Баумана')
     title Что такое кибернетизация для россиян?
+    link(rel='prefetch' href='https://mc.webvisor.org')
+    link(rel='prefetch' href='https://mc.yandex.ru')
     link(href='./main.css' rel='stylesheet')
     link(rel='stylesheet' href="https://fonts.googleapis.com/css?family=Fira+Mono|Montserrat:400,900&display=swap")
   body
