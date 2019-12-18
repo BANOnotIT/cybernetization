@@ -5,6 +5,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     concat = require('gulp-concat'),
     imagemin = require('gulp-imagemin'),
+    terser = require('gulp-terser'),
+    sourcemaps = require('gulp-sourcemaps'),
     del = require('del');
 
 function cleanup() {
@@ -13,19 +15,22 @@ function cleanup() {
 
 function style() {
     return gulp.src('src/**/*.scss', {ignore: '**/_*'})
+        .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(concat('main.css'))
         .pipe(cleanCss())
+        .pipe(sourcemaps.write('maps/'))
         .pipe(gulp.dest('public/'))
         .pipe(browserSync.stream())
 }
 
-
 function html() {
     return gulp.src('src/**/*.pug', {ignore: '**/viewports/**/*.*'})
+        .pipe(sourcemaps.init())
         .pipe(pug({
             cache: false
         }))
+        .pipe(sourcemaps.write('maps/'))
         .pipe(gulp.dest('public/'))
 }
 
@@ -45,6 +50,14 @@ function img() {
         .pipe(gulp.dest('public/assets'))
 }
 
+function js() {
+    return gulp.src('src/js/**/*.*')
+        .pipe(sourcemaps.init())
+        .pipe(terser())
+        .pipe(sourcemaps.write('maps/'))
+        .pipe(gulp.dest('public/assets/js'))
+}
+
 function sync() {
     browserSync.init({
         server: 'public'
@@ -52,5 +65,5 @@ function sync() {
     browserSync.watch('public/**/*.*').on('change', browserSync.reload)
 }
 
-exports.default = gulp.series(cleanup, gulp.parallel(html, style, img));
+exports.default = gulp.series(cleanup, gulp.parallel(html, style, img, js));
 exports.watch = gulp.series(exports.default, watch);
