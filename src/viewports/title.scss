@@ -6,20 +6,27 @@ $text: $text1;
   transform: translate(0, 0);
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
-  color: $rich-black;
+  color: $text1;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: $text1;
+  background: $rich-black;
   height: 100%;
   text-align: center;
-  font-size: 4rem;
-  line-height: .9;
+  font-size: 5rem;
+  line-height: 1;
+
+  span:first-child {
+    padding-right: 10ex;
+  }
+
+  span:last-child {
+    padding-left: 10ex;
+  }
 
   b {
-
     font-size: 8rem;
     display: block;
     width: 100%;
