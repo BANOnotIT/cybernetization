@@ -45,16 +45,14 @@ const initScrollAnimation = () => {
 
     function animateScroll(target) {
         const spend = Date.now() - state.lastScrollTime - delay;
-        if (spend < 0) {
-            state.lastAF = requestAnimationFrame(() => animateScroll(target));
-        }
 
         const t = spend / duration;
 
         const curveY = 2 * (1 - t) * t + t ** 2;
+        const newScrollTop = Math.round(curveY * state.deltaY + state.startY);
 
         state.simulated = true;
-        document.body.scrollTop = Math.floor(curveY * state.deltaY + state.startY);
+        window.scroll(0, newScrollTop);
 
         if (t <= 1)
             state.lastAF = requestAnimationFrame(() => animateScroll(target))
@@ -63,4 +61,4 @@ const initScrollAnimation = () => {
 
 };
 
-window.onload = () => initScrollAnimation();
+window.addEventListener('load', initScrollAnimation);
