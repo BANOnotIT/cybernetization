@@ -8,8 +8,10 @@
   }
 
   .img {
-    background-image: url(./assets/titan-arm.jpg);
-    grid-area: 3/12/21/19;
+    background-image: url(./assets/titan-arm-masked.png);
+    grid-area: 1/10/21/21;
+    background-size: cover;
+    background-position: left center;
   }
 
   .quotes {

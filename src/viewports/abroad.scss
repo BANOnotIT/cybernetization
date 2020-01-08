@@ -2,14 +2,14 @@
 
 #abroad {
   .fill {
-    grid-area: 9/2/21/19;
-    border-bottom-right-radius: 4rem;
+    grid-area: 9/2/21/21;
+    //border-bottom-right-radius: 4rem;
     border-top-left-radius: 2rem;
   }
 
   .img {
-    background-image: url(assets/american-robot.jpg);
-    grid-area: 1/13/21/18;
+    background-image: url(assets/american-robot-masked.png);
+    grid-area: 1/13/21/19;
   }
 
   h1 {

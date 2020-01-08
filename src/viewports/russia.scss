@@ -7,8 +7,11 @@
   }
 
   .img {
-    background-image: url(assets/russia2077.jpg);
-    grid-area: 1/1/21/10;
+    background-image: url(../assets/russia2077-masked.png);
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-area: 1/1/21/16;
   }
 
   h1 {
